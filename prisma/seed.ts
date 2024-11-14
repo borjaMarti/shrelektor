@@ -21,10 +21,10 @@ async function main() {
   });
 
   await prisma.user.upsert({
-    where: { name: "Álv" },
+    where: { name: "Alv" },
     update: {},
     create: {
-      name: "Álv",
+      name: "Alv",
       selected: false,
     },
   });
@@ -57,10 +57,10 @@ async function main() {
   });
 
   await prisma.user.upsert({
-    where: { name: "Áng" },
+    where: { name: "Ang" },
     update: {},
     create: {
-      name: "Áng",
+      name: "Ang",
       selected: false,
     },
   });

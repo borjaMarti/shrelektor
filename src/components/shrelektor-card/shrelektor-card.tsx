@@ -4,7 +4,6 @@ import { useState } from "react";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -91,9 +90,6 @@ const ShrelektorCard: React.FC<ShrelektorCardProps> = ({
     <Card className="w-[350px]">
       <CardHeader>
         <CardTitle>Shrelektor</CardTitle>
-        <CardDescription>
-          Elige quién eres y qué personaje quieres ser.
-        </CardDescription>
       </CardHeader>
       <CardContent>
         <div className="grid w-full items-center gap-4">
@@ -110,15 +106,15 @@ const ShrelektorCard: React.FC<ShrelektorCardProps> = ({
                 >
                   {selectedUser
                     ? users.find((user) => user.id === selectedUser.id)?.name
-                    : "Elige"}
+                    : "¯\\_(ツ)_/¯"}
                   <ChevronsUpDown className="opacity-50" />
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="p-0">
                 <Command>
-                  <CommandInput placeholder="Elige" />
+                  <CommandInput placeholder="¯\_(ツ)_/¯" />
                   <CommandList>
-                    <CommandEmpty>No se ha encontrado el usuario.</CommandEmpty>
+                    <CommandEmpty>Eing?</CommandEmpty>
                     <CommandGroup>
                       {users.map((user) => (
                         <CommandItem
@@ -168,17 +164,15 @@ const ShrelektorCard: React.FC<ShrelektorCardProps> = ({
                     ? characters.find(
                         (character) => character.id === selectedCharacter.id,
                       )?.name
-                    : "Elige"}
+                    : "🧌"}
                   <ChevronsUpDown className="opacity-50" />
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="p-0">
                 <Command>
-                  <CommandInput placeholder="Elige" />
+                  <CommandInput placeholder="🧌" />
                   <CommandList>
-                    <CommandEmpty>
-                      No se ha encontrado el personaje.
-                    </CommandEmpty>
+                    <CommandEmpty>Eing?</CommandEmpty>
                     <CommandGroup>
                       {characters.map((character) => (
                         <CommandItem
@@ -226,7 +220,23 @@ const ShrelektorCard: React.FC<ShrelektorCardProps> = ({
             <AlertDialogHeader>
               <AlertDialogTitle>¿Seguro?</AlertDialogTitle>
               <AlertDialogDescription>
-                Esta acción no se podrá revertir.
+                <p>
+                  0️⃣: ¿Eres {selectedUser?.name}? No te equivoques (y tú Lara no
+                  espíes 👀).
+                </p>
+                <p>1️⃣: Carta en la mesa pesa.</p>
+                <p>
+                  2️⃣:{" "}
+                  <a
+                    href="https://www.youtube.com/watch?v=eT3BFzSD6YY"
+                    target="_blank"
+                    className="text-cyan-500 underline"
+                  >
+                    They don&apos;t stop coming and they don&apos;t stop coming
+                    and they don&apos;t stop coming and they don&apos;t stop
+                    coming.
+                  </a>
+                </p>
               </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
