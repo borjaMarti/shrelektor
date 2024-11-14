@@ -38,6 +38,7 @@ import {
   AlertDialogAction,
 } from "@/components/ui/alert-dialog";
 import { useToast } from "@/hooks/use-toast";
+import { shrelekcionar } from "@/lib/actions";
 
 type User = {
   id: string;
@@ -55,17 +56,11 @@ type Character = {
 type ShrelektorCardProps = {
   users: User[];
   characters: Character[];
-  shrelekcionar: (
-    userId: string,
-    characterId: string,
-  ) => Promise<{ message?: string; error?: string }>;
 };
 
-// Client-side component
 const ShrelektorCard: React.FC<ShrelektorCardProps> = ({
   users,
   characters,
-  shrelekcionar,
 }) => {
   const { toast } = useToast();
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
