@@ -218,13 +218,14 @@ const ShrelektorCard: React.FC<ShrelektorCardProps> = ({
           </AlertDialogTrigger>
           <AlertDialogContent>
             <AlertDialogHeader>
-              <AlertDialogTitle>¿Seguro?</AlertDialogTitle>
+              <AlertDialogTitle>
+                ¿Tamos redy? ¿{selectedCharacter?.name}?
+              </AlertDialogTitle>
               <AlertDialogDescription>
                 <p>
-                  0️⃣: ¿Eres {selectedUser?.name}? No te equivoques (y tú Lara no
-                  espíes 👀).
+                  0️⃣: ¿Seguro que eres {selectedUser?.name}? No te equivoques 👀
                 </p>
-                <p>1️⃣: Carta en la mesa pesa.</p>
+                <p>1️⃣: Carta en la mesa pesa 🃏</p>
                 <p>
                   2️⃣:{" "}
                   <a
@@ -234,8 +235,9 @@ const ShrelektorCard: React.FC<ShrelektorCardProps> = ({
                   >
                     They don&apos;t stop coming and they don&apos;t stop coming
                     and they don&apos;t stop coming and they don&apos;t stop
-                    coming.
-                  </a>
+                    coming
+                  </a>{" "}
+                  🌠
                 </p>
               </AlertDialogDescription>
             </AlertDialogHeader>
