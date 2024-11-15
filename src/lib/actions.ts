@@ -42,5 +42,5 @@ export async function shrelekcionar(userId: string, characterId: string) {
     data: { selected: true },
   });
 
-  return { message: "Shrelekcionado!" };
+  return { message: "Shrelekcionado!", character: character.name };
 }

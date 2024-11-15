@@ -81,7 +81,8 @@ const ShrelektorCard: React.FC<ShrelektorCardProps> = ({
       });
     } else {
       toast({
-        description: result.message,
+        title: result.message,
+        description: result.character,
       });
     }
   };
