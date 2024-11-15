@@ -34,6 +34,7 @@ import {
   AlertDialogFooter,
   AlertDialogCancel,
   AlertDialogAction,
+  AlertDialogDescription,
 } from "@/components/ui/alert-dialog";
 import { useToast } from "@/hooks/use-toast";
 import { shrelekcionar } from "@/lib/actions";
@@ -221,12 +222,12 @@ const ShrelektorCard: React.FC<ShrelektorCardProps> = ({
               <AlertDialogTitle>
                 ¿Tamos redy? ¿{selectedCharacter?.name}?
               </AlertDialogTitle>
-              <div className="text-sm text-muted-foreground">
-                <p>
+              <AlertDialogDescription className="flex flex-col">
+                <span>
                   0️⃣: ¿Seguro que eres {selectedUser?.name}? No te equivoques 👀
-                </p>
-                <p>1️⃣: Carta en la mesa pesa 🃏</p>
-                <p>
+                </span>
+                <span>1️⃣: Carta en la mesa pesa 🃏</span>
+                <span>
                   2️⃣:{" "}
                   <a
                     href="https://www.youtube.com/watch?v=eT3BFzSD6YY"
@@ -238,8 +239,8 @@ const ShrelektorCard: React.FC<ShrelektorCardProps> = ({
                     coming
                   </a>{" "}
                   🌠
-                </p>
-              </div>
+                </span>
+              </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
               <AlertDialogCancel>Parapara</AlertDialogCancel>
