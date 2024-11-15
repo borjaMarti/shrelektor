@@ -90,7 +90,7 @@ const ShrelektorCard: React.FC<ShrelektorCardProps> = ({
   return (
     <Card className="w-[350px]">
       <CardHeader>
-        <CardTitle>Shrelektor</CardTitle>
+        <CardTitle>Shrelektor 🧌</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="grid w-full items-center gap-4">
@@ -165,13 +165,13 @@ const ShrelektorCard: React.FC<ShrelektorCardProps> = ({
                     ? characters.find(
                         (character) => character.id === selectedCharacter.id,
                       )?.name
-                    : "🧌"}
+                    : "ヽ༼ຈل͜ຈ༽ﾉ"}
                   <ChevronsUpDown className="opacity-50" />
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="p-0">
                 <Command>
-                  <CommandInput placeholder="🧌" />
+                  <CommandInput placeholder="ヽ༼ຈل͜ຈ༽ﾉ" />
                   <CommandList>
                     <CommandEmpty>Eing?</CommandEmpty>
                     <CommandGroup>
