@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import {
   Card,
@@ -38,19 +37,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { useToast } from "@/hooks/use-toast";
 import { shrelekcionar } from "@/lib/actions";
-
-type User = {
-  id: string;
-  name: string;
-  character: string | null;
-  selected: boolean;
-};
-
-type Character = {
-  id: string;
-  name: string;
-  selected: boolean;
-};
+import { Character, User } from "@prisma/client";
 
 type ShrelektorCardProps = {
   users: User[];
@@ -68,6 +55,7 @@ const ShrelektorCard: React.FC<ShrelektorCardProps> = ({
   );
   const [openUsers, setOpenUsers] = useState(false);
   const [openCharacters, setOpenCharacters] = useState(false);
+  const unselectedUsers = users.filter((user) => !user.selected);
 
   const handleShrelekcionar = async () => {
     if (!selectedUser || !selectedCharacter) return;
@@ -117,7 +105,7 @@ const ShrelektorCard: React.FC<ShrelektorCardProps> = ({
                   <CommandList>
                     <CommandEmpty>Eing?</CommandEmpty>
                     <CommandGroup>
-                      {users.map((user) => (
+                      {unselectedUsers.map((user) => (
                         <CommandItem
                           key={user.id}
                           value={user.name}
