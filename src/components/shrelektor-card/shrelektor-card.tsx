@@ -31,7 +31,6 @@ import {
   AlertDialogContent,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogCancel,
   AlertDialogAction,
@@ -222,7 +221,7 @@ const ShrelektorCard: React.FC<ShrelektorCardProps> = ({
               <AlertDialogTitle>
                 ¿Tamos redy? ¿{selectedCharacter?.name}?
               </AlertDialogTitle>
-              <AlertDialogDescription>
+              <div className="text-sm text-muted-foreground">
                 <p>
                   0️⃣: ¿Seguro que eres {selectedUser?.name}? No te equivoques 👀
                 </p>
@@ -240,7 +239,7 @@ const ShrelektorCard: React.FC<ShrelektorCardProps> = ({
                   </a>{" "}
                   🌠
                 </p>
-              </AlertDialogDescription>
+              </div>
             </AlertDialogHeader>
             <AlertDialogFooter>
               <AlertDialogCancel>Parapara</AlertDialogCancel>
